@@ -1,0 +1,43 @@
+{
+  "filetype": "generate_conversations",
+  "num_conversations": 24,
+  "text_files": [
+    "/ceph/User/E01442/turboquant/vllm/benchmarks/sonnet.txt",
+    "/ceph/User/E01442/turboquant/vllm/benchmarks/sonnet.txt",
+    "/ceph/User/E01442/turboquant/vllm/benchmarks/sonnet.txt",
+    "/ceph/User/E01442/turboquant/vllm/benchmarks/sonnet.txt",
+    "/ceph/User/E01442/turboquant/vllm/benchmarks/sonnet.txt",
+    "/share/models/official/Qwen3-30B-A3B-Instruct-2507/README.md",
+    "/share/models/official/Qwen3-30B-A3B-Instruct-2507/README.md",
+    "/share/models/official/Qwen3-30B-A3B-Instruct-2507/README.md"
+  ],
+  "print_stats": true,
+  "prompt_input": {
+    "num_turns": {
+      "distribution": "uniform",
+      "min": 10,
+      "max": 14
+    },
+    "common_prefix_num_tokens": {
+      "distribution": "constant",
+      "value": 256
+    },
+    "prefix_num_tokens": {
+      "distribution": "lognormal",
+      "average": 1500,
+      "max": 4000
+    },
+    "num_tokens": {
+      "distribution": "uniform",
+      "min": 200,
+      "max": 260
+    }
+  },
+  "prompt_output": {
+    "num_tokens": {
+      "distribution": "uniform",
+      "min": 96,
+      "max": 128
+    }
+  }
+}

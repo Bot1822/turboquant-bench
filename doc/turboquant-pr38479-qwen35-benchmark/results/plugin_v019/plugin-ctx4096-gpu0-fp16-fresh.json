@@ -1,0 +1,202 @@
+{
+  "mode": "plugin_tq4",
+  "model": "/share/models/official/Qwen3.5-35B-A3B",
+  "prompt": "Summarize the memory and latency tradeoffs of KV-cache compression in one sentence.\nDetail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence.",
+  "max_model_len": 4096,
+  "gpu_memory_utilization": 0.9,
+  "dtype": "float16",
+  "requested_attention_backend": null,
+  "requested_kv_cache_dtype": null,
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "LD_LIBRARY_PATH": "/usr/local/lib/python3.12/dist-packages/cv2/../../lib64:/usr/local/nvidia/lib64:/usr/local/cuda/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64",
+    "TQ4_K_BITS": null,
+    "TQ4_V_BITS": null,
+    "TQ4_USE_FUSED_PAGED": null,
+    "TQ4_USE_INT8_PREFILL": null
+  },
+  "versions": {
+    "python": "Python 3.12.13",
+    "vllm": "0.19.0+cu130",
+    "turboquant-vllm": "1.5.0",
+    "transformers": "4.57.6",
+    "torch": "2.10.0+cu130"
+  },
+  "memory_before": [
+    {
+      "index": 0,
+      "memory_used_mb": 1171,
+      "utilization_gpu": 1
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 1710,
+      "utilization_gpu": 2
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 17302,
+      "utilization_gpu": 1
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 1041,
+      "utilization_gpu": 17
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 67882,
+      "utilization_gpu": 13
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 67842,
+      "utilization_gpu": 1
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 3558,
+      "utilization_gpu": 11
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 66796,
+      "utilization_gpu": 1
+    }
+  ],
+  "torch_memory_before": null,
+  "prompt_tokens": 3984,
+  "load_seconds": 241.8748843499925,
+  "memory_after_load": [
+    {
+      "index": 0,
+      "memory_used_mb": 73216,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 1032,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 16348,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 525,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 67146,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 67146,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 2576,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 66010,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_load": null,
+  "warmup_runs": 1,
+  "warmup_max_tokens": 32,
+  "measure_trials": 1,
+  "cache_dtype": "auto",
+  "attention_backend": "AttentionBackendEnum.CUSTOM",
+  "block_size": 1056,
+  "num_gpu_blocks": 226,
+  "trials": [
+    {
+      "trial_index": 0,
+      "status": "success",
+      "generated_text": " Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval",
+      "generated_tokens": 32,
+      "wall_time_seconds": 3.438324216986075,
+      "output_tokens_per_s": 9.306859382810087,
+      "ttft_seconds": 0.8863143920898438,
+      "prefill_seconds": 0.8631121339276433,
+      "decode_seconds": 2.550052618025802,
+      "inference_seconds": 3.4131647519534454,
+      "decode_tokens_per_s": 12.156611899247615,
+      "mean_inter_token_latency_seconds": 0.08225976187180006,
+      "mean_time_per_output_token_seconds": 0.10666139849854517
+    }
+  ],
+  "trial_summary": {
+    "num_trials": 1,
+    "successful_trials": 1,
+    "mean_wall_time_seconds": 3.438324216986075,
+    "median_wall_time_seconds": 3.438324216986075,
+    "mean_output_tokens_per_s": 9.306859382810087,
+    "mean_ttft_seconds": 0.8863143920898438,
+    "mean_decode_tokens_per_s": 12.156611899247615,
+    "mean_inter_token_latency_seconds": 0.08225976187180006
+  },
+  "generation_seconds": 3.438324216986075,
+  "generated_text": " Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval",
+  "generated_tokens": 32,
+  "output_tokens_per_s": 9.306859382810087,
+  "ttft_seconds": 0.8863143920898438,
+  "prefill_seconds": 0.8631121339276433,
+  "decode_seconds": 2.550052618025802,
+  "inference_seconds": 3.4131647519534454,
+  "decode_tokens_per_s": 12.156611899247615,
+  "mean_inter_token_latency_seconds": 0.08225976187180006,
+  "mean_time_per_output_token_seconds": 0.10666139849854517,
+  "memory_after_generate": [
+    {
+      "index": 0,
+      "memory_used_mb": 74006,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 1032,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 16348,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 525,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 67146,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 67146,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 2576,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 66010,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_generate": null,
+  "status": "success"
+}

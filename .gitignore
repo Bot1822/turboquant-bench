@@ -1,0 +1,13 @@
+.codex/
+.tmp/
+
+# Local scratch / generated artifacts
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+
+# Benchmark-side generated build cache
+doc/turboquant-pr38479-qwen35-benchmark/cache/
+
+# Separate local workspace, not managed by this root repo
+turboquant-test/

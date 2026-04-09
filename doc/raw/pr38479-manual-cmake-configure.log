@@ -1,0 +1,200 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Build type: RelWithDebInfo
+-- Target device: cuda
+-- Found Python: /usr/bin/python3 (found version "3.12.13") found components: Interpreter Development.Module Development.SABIModule
+-- Found python matching: /usr/bin/python3.
+-- Found CUDA: /usr/local/cuda (found version "12.9")
+-- The CUDA compiler identification is NVIDIA 12.9.86 with host compiler GNU 11.4.0
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /usr/local/cuda/include (found version "12.9.86")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- PyTorch: CUDA detected: 12.9
+-- PyTorch: CUDA nvcc is: /usr/local/cuda/bin/nvcc
+-- PyTorch: CUDA toolkit directory: /usr/local/cuda
+-- PyTorch: Header version is: 12.9
+-- Found Python: /usr/bin/python3 (found version "3.12.13") found components: Interpreter
+CMake Warning at /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/public/cuda.cmake:149 (message):
+  Failed to compute shorthash for libnvrtc.so
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+  CMakeLists.txt:91 (find_package)
+
+
+-- USE_CUDNN is set to 0. Compiling without cuDNN support
+-- USE_CUSPARSELT is set to 0. Compiling without cuSPARSELt support
+-- USE_CUDSS is set to 0. Compiling without cuDSS support
+-- USE_CUFILE is set to 0. Compiling without cuFile support
+CMake Warning at /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/public/cuda.cmake:332 (message):
+  pytorch is not compatible with `CMAKE_CUDA_ARCHITECTURES` and will ignore
+  its value.  Please configure `TORCH_CUDA_ARCH_LIST` instead.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
+  CMakeLists.txt:91 (find_package)
+
+
+-- Added CUDA NVCC flags for: -gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_89,code=sm_89;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120
+CMake Warning at /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:22 (message):
+  static library kineto_LIBRARY-NOTFOUND not found.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:125 (append_torchlib_if_found)
+  CMakeLists.txt:91 (find_package)
+
+
+-- Found Torch: /usr/local/lib/python3.12/dist-packages/torch/lib/libtorch.so
+-- CUDA target architectures: 7.0;7.5;8.0;8.9;9.0;10.0;12.0
+-- CUDA supported target architectures: 7.0;7.5;8.0;8.9;9.0;10.0;12.0
+-- FetchContent base directory: /ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/.deps
+-- Enabling cumem allocator extension.
+-- CMake Version: 3.31.10
+-- CUTLASS 4.4.2
+-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include (found version "12.9.86")
+-- CUDART: /usr/local/cuda/lib64/libcudart.so
+-- CUDA Driver: /usr/local/cuda/lib64/stubs/libcuda.so
+-- NVRTC: /usr/local/cuda/lib64/libnvrtc.so
+-- Default Install Location: install
+-- Found Python3: /usr/bin/python3.12 (found suitable version "3.12.13", minimum required is "3.5") found components: Interpreter
+-- CUDA Compilation Architectures: 70;72;75;80;86;87;89;90;90a;100;100a;120;120a;121;121a;101;101a;100f;120f;121f;103a;103f;101f
+-- Enable caching of reference results in conv unit tests
+-- Enable rigorous conv problem sizes in conv unit tests
+-- Grid Dependency Control (GDC) is enabled for SM100 kernels (required for programmatic dependent launches).
+-- Using the following NVCC flags: 
+  --expt-relaxed-constexpr
+  -ftemplate-backtrace-limit=0
+  -DCUTLASS_TEST_LEVEL=0
+  -DCUTLASS_TEST_ENABLE_CACHED_RESULTS=1
+  -DCUTLASS_CONV_UNIT_TEST_RIGOROUS_SIZE_ENABLED=1
+  -DCUTLASS_DEBUG_TRACE_LEVEL=0
+  -DCUTLASS_SM100_FAMILY_ARCHS_ENABLED
+  -Xcompiler=-Wconversion
+  -Xcompiler=-fno-strict-aliasing
+  -lineinfo
+-- Configuring cublas ...
+-- cuBLAS Disabled.
+-- Configuring cuBLAS ... done.
+-- Marlin generation script hash: ac93a0e34f641c0cc59cb752f5d8a694(ARCH:7.0,7.5,8.0,8.9,9.0,10.0,12.0)
+-- Last run Marlin generate script hash: 
+-- Marlin generation completed successfully.
+-- Building Marlin kernels for archs: 7.5;8.0+PTX
+-- Building AllSpark kernels for archs: 8.0;8.9
+-- Building scaled_mm_c3x_sm90 for archs: 9.0a
+-- Building scaled_mm_c3x_sm120 for archs: 12.0a
+-- Building scaled_mm_c3x_sm100 for archs: 10.0a
+-- Building scaled_mm_c2x for archs: 7.5;8.0;8.9+PTX
+-- Building NVFP4 for archs: 12.0a
+-- Building NVFP4 for archs: 10.0a
+-- Building CUTLASS MLA for archs: 10.0a;12.0a
+-- Building grouped_mm_c3x for archs: 9.0a
+-- Building grouped_mm_c3x for archs: 10.0a
+-- Building ES MXFP8 grouped kernels for archs: 10.0a
+-- Building dsv3_fused_a_gemm for archs: 9.0a;10.0a
+-- Building moe_data for archs: 9.0a;10.0a;12.0a
+-- Machete generation script hash: fe8c2a41ad79d021011209b8098fc324
+-- Last run machete generate script hash: 
+-- Machete generation completed successfully.
+-- Building Machete kernels for archs: 9.0a
+-- Building W4A8 kernels for archs: 9.0a
+-- Building hadacore
+-- Enabling C extension.
+-- Enabling C_stable extension.
+-- Marlin MOE generation script hash with arch: e35bb24e0848870e45db2dc5845ff642(ARCH:7.0,7.5,8.0,8.9,9.0,10.0,12.0)
+-- Last run Marlin MOE generate script hash with arch: 
+-- Marlin MOE generation completed successfully.
+-- Building Marlin MOE kernels for archs: 7.5;8.0+PTX
+-- Building DSV3 router GEMM kernel for archs: 9.0a;10.0a
+-- Enabling moe extension.
+-- [triton_kernels] Fetch from https://github.com/triton-lang/triton.git:v3.6.0
+-- [triton_kernels] triton_kernels is available at /ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/.deps/triton_kernels-src/python/triton_kernels/triton_kernels/
+CMake Warning (dev) at /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1564 (cmake_parse_arguments):
+  The BUILD_COMMAND keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  ARG_BUILD_COMMAND variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145 (cmake_language)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)
+  cmake/external_projects/flashmla.cmake:30 (FetchContent_MakeAvailable)
+  CMakeLists.txt:1211 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1564 (cmake_parse_arguments):
+  The CONFIGURE_COMMAND keyword was followed by an empty string or no value
+  at all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset
+  the ARG_CONFIGURE_COMMAND variable rather than setting it to an empty
+  string.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145 (cmake_language)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)
+  cmake/external_projects/flashmla.cmake:30 (FetchContent_MakeAvailable)
+  CMakeLists.txt:1211 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- FlashMLA is available at /ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/.deps/flashmla-src
+-- FlashMLA CUDA architectures: 9.0a;10.0f
+CMake Warning (dev) at /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(qutlass) is deprecated, call
+  FetchContent_MakeAvailable(qutlass) instead.  Policy CMP0169 can be set to
+  OLD to allow FetchContent_Populate(qutlass) to be called directly for now,
+  but the ability to call it with declared details will be removed completely
+  in a future version.
+Call Stack (most recent call first):
+  cmake/external_projects/qutlass.cmake:27 (FetchContent_Populate)
+  CMakeLists.txt:1212 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1564 (cmake_parse_arguments):
+  The BUILD_COMMAND keyword was followed by an empty string or no value at
+  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the
+  ARG_BUILD_COMMAND variable rather than setting it to an empty string.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145 (cmake_language)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1978:EVAL:1 (__FetchContent_Populate)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1978 (cmake_language)
+  cmake/external_projects/qutlass.cmake:27 (FetchContent_Populate)
+  CMakeLists.txt:1212 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1564 (cmake_parse_arguments):
+  The CONFIGURE_COMMAND keyword was followed by an empty string or no value
+  at all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset
+  the ARG_CONFIGURE_COMMAND variable rather than setting it to an empty
+  string.
+Call Stack (most recent call first):
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:2145 (cmake_language)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1978:EVAL:1 (__FetchContent_Populate)
+  /usr/local/lib/python3.12/dist-packages/cmake/data/share/cmake-3.31/Modules/FetchContent.cmake:1978 (cmake_language)
+  cmake/external_projects/qutlass.cmake:27 (FetchContent_Populate)
+  CMakeLists.txt:1212 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- [QUTLASS] QuTLASS is available at /ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/.deps/qutlass-src
+-- Build type: RelWithDebInfo
+-- Target device: cuda
+-- Found Python: /usr/bin/python3 (found version "3.12.13") found components: Interpreter Development.Module Development.SABIModule
+CMake Warning at .deps/vllm-flash-attn-src/CMakeLists.txt:77 (message):
+  Pytorch version 2.4.0 expected for CUDA build, saw 2.10.0 instead.
+
+
+-- CUDA target architectures: 7.0;7.5;8.0;8.9;9.0;10.0;12.0
+-- CUDA supported target architectures: 8.0;8.9;9.0;10.0;12.0
+-- FA2_ARCHS: 8.0+PTX
+-- FA3_ARCHS: 9.0a
+-- vllm-flash-attn is available at /ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/.deps/vllm-flash-attn-src
+-- Configuring done (25.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /tmp/zgp-pr38479-manual-build

@@ -1,0 +1,5 @@
+{
+  "status": "skipped_dirty_gpu",
+  "used_mb": 76637,
+  "reason": "GPU 1 already has 76637 MB allocated, exceeding clean threshold 1024 MB."
+}

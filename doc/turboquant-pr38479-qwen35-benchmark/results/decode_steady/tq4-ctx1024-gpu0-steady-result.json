@@ -1,0 +1,235 @@
+{
+  "mode": "tq4",
+  "model": "/share/models/official/Qwen3.5-35B-A3B",
+  "prompt": "Write one short sentence about TurboQuant.\nDetail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence. Detail retrieval benchmark filler sentence.",
+  "max_model_len": 1024,
+  "gpu_memory_utilization": 0.94,
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "LD_LIBRARY_PATH": "/usr/local/lib/python3.12/dist-packages/cv2/../../lib64:/usr/local/nvidia/lib64:/lib/x86_64-linux-gnu"
+  },
+  "memory_before": [
+    {
+      "index": 0,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 67780,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_before": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "prompt_tokens": 903,
+  "load_seconds": 206.39739206701051,
+  "memory_after_load": [
+    {
+      "index": 0,
+      "memory_used_mb": 75051,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 67780,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_load": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "warmup_runs": 1,
+  "warmup_max_tokens": 32,
+  "measure_trials": 3,
+  "cache_dtype": "tq4",
+  "block_size": 2096,
+  "num_gpu_blocks": 348,
+  "trials": [
+    {
+      "trial_index": 0,
+      "status": "success",
+      "generated_text": " Detail retrieval benchmark.\n\n<think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A long string of repeated text",
+      "generated_tokens": 32,
+      "wall_time_seconds": 2.60189327201806,
+      "output_tokens_per_s": 12.298736594672237,
+      "ttft_seconds": 0.2240140438079834,
+      "prefill_seconds": 0.21195391501532868,
+      "decode_seconds": 2.3765501249581575,
+      "inference_seconds": 2.588504039973486,
+      "decode_tokens_per_s": 13.04411788939053,
+      "mean_inter_token_latency_seconds": 0.07666290725671476,
+      "mean_time_per_output_token_seconds": 0.08089075124917144
+    },
+    {
+      "trial_index": 1,
+      "status": "success",
+      "generated_text": " Detail retrieval benchmark.\n\n<think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A long string of repeated text",
+      "generated_tokens": 32,
+      "wall_time_seconds": 2.530128878017422,
+      "output_tokens_per_s": 12.64757707720992,
+      "ttft_seconds": 0.19930410385131836,
+      "prefill_seconds": 0.18872149800881743,
+      "decode_seconds": 2.3290924669709057,
+      "inference_seconds": 2.517813964979723,
+      "decode_tokens_per_s": 13.309905226870171,
+      "mean_inter_token_latency_seconds": 0.0751320150635776,
+      "mean_time_per_output_token_seconds": 0.07868168640561635
+    },
+    {
+      "trial_index": 2,
+      "status": "success",
+      "generated_text": " Detail retrieval benchmark.\n\n<think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A long string of repeated text",
+      "generated_tokens": 32,
+      "wall_time_seconds": 2.525116321980022,
+      "output_tokens_per_s": 12.67268352014287,
+      "ttft_seconds": 0.19934773445129395,
+      "prefill_seconds": 0.18854293000185862,
+      "decode_seconds": 2.322946903994307,
+      "inference_seconds": 2.5114898339961655,
+      "decode_tokens_per_s": 13.345117766874267,
+      "mean_inter_token_latency_seconds": 0.07493377109659055,
+      "mean_time_per_output_token_seconds": 0.07848405731238017
+    }
+  ],
+  "trial_summary": {
+    "num_trials": 3,
+    "successful_trials": 3,
+    "mean_wall_time_seconds": 2.5523794906718344,
+    "median_wall_time_seconds": 2.530128878017422,
+    "mean_output_tokens_per_s": 12.53966573067501,
+    "mean_ttft_seconds": 0.20755529403686523,
+    "mean_decode_tokens_per_s": 13.23304696104499,
+    "mean_inter_token_latency_seconds": 0.07557623113896098
+  },
+  "generation_seconds": 2.525116321980022,
+  "generated_text": " Detail retrieval benchmark.\n\n<think>\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A long string of repeated text",
+  "generated_tokens": 32,
+  "output_tokens_per_s": 12.67268352014287,
+  "ttft_seconds": 0.19934773445129395,
+  "prefill_seconds": 0.18854293000185862,
+  "decode_seconds": 2.322946903994307,
+  "inference_seconds": 2.5114898339961655,
+  "decode_tokens_per_s": 13.345117766874267,
+  "mean_inter_token_latency_seconds": 0.07493377109659055,
+  "mean_time_per_output_token_seconds": 0.07848405731238017,
+  "memory_after_generate": [
+    {
+      "index": 0,
+      "memory_used_mb": 75203,
+      "utilization_gpu": 14
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 67780,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_generate": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "status": "success"
+}

@@ -1,0 +1,296 @@
+{
+  "mode": "baseline",
+  "model": "/share/models/official/Qwen3.5-35B-A3B",
+  "dataset_path": "/ceph/User/E01442/turboquant/doc/turboquant-pr38479-qwen35-benchmark/results/retrieval/generated/retrieval_examples.jsonl",
+  "target_tokens": 8192,
+  "gpu_memory_utilization": 0.94,
+  "max_tokens": 24,
+  "memory_before": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_before": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "num_examples": 3,
+  "example_ids": [
+    "tierA-8192-0",
+    "tierB-8192-0",
+    "tierC-8192-0"
+  ],
+  "max_prompt_tokens": 11030,
+  "mean_prompt_tokens": 11008.333333333334,
+  "effective_max_model_len": 11118,
+  "memory_after_load": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 75415,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_load": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "cache_dtype": "auto",
+  "block_size": 1056,
+  "num_gpu_blocks": 345,
+  "rows": [
+    {
+      "mode": "baseline",
+      "example_id": "tierA-8192-0",
+      "tier": "A",
+      "seed": 0,
+      "target_tokens": 8192,
+      "question": "What is the recovery ticket? Answer with the exact ticket only.",
+      "answer": "TQ-985440",
+      "prompt_tokens": 10991,
+      "trial_index": 0,
+      "status": "success",
+      "generated_text": "\n\n<think>\n\n</think>\n\nTQ-985440",
+      "generated_tokens": 15,
+      "wall_time_seconds": 2.527230800013058,
+      "output_tokens_per_s": 5.935350265564386,
+      "ttft_seconds": 1.4997782707214355,
+      "prefill_seconds": 1.4620258470531553,
+      "decode_seconds": 1.0252198019297794,
+      "inference_seconds": 2.4872456489829347,
+      "decode_tokens_per_s": 13.655608264342622,
+      "mean_inter_token_latency_seconds": 0.0732299858521271,
+      "mean_time_per_output_token_seconds": 0.1658163765988623,
+      "score": {
+        "prediction": "\n\n<think>\n\n</think>\n\nTQ-985440",
+        "answer": "TQ-985440",
+        "exact_match": false
+      }
+    },
+    {
+      "mode": "baseline",
+      "example_id": "tierB-8192-0",
+      "tier": "B",
+      "seed": 0,
+      "target_tokens": 8192,
+      "question": "Return EVENT_ID|DATE using the exact values from the document only.",
+      "answer": "EV-7311|2026-07-02",
+      "prompt_tokens": 11004,
+      "trial_index": 1,
+      "status": "success",
+      "generated_text": "\n\n<think>\n\n</think>\n\nEV-7311|2026-07-02",
+      "generated_tokens": 23,
+      "wall_time_seconds": 2.273828604957089,
+      "output_tokens_per_s": 10.115098363112576,
+      "ttft_seconds": 0.6167654991149902,
+      "prefill_seconds": 0.5741874100640416,
+      "decode_seconds": 1.65480777900666,
+      "inference_seconds": 2.2289951890707016,
+      "decode_tokens_per_s": 13.294595468487618,
+      "mean_inter_token_latency_seconds": 0.07521853540939363,
+      "mean_time_per_output_token_seconds": 0.09691283430742181,
+      "score": {
+        "prediction": "\n\n<think>\n\n</think>\n\nEV-7311|2026-07-02",
+        "answer": "EV-7311|2026-07-02",
+        "exact_match": false
+      }
+    },
+    {
+      "mode": "baseline",
+      "example_id": "tierC-8192-0",
+      "tier": "C",
+      "seed": 0,
+      "target_tokens": 8192,
+      "question": "What is the signed release identifier? Answer with the exact id only.",
+      "answer": "ZX-7311",
+      "prompt_tokens": 11030,
+      "trial_index": 2,
+      "status": "success",
+      "generated_text": "\n\n<think>\n\n</think>\n\nZX-7311",
+      "generated_tokens": 12,
+      "wall_time_seconds": 1.3897112410049886,
+      "output_tokens_per_s": 8.634887339129557,
+      "ttft_seconds": 0.599252462387085,
+      "prefill_seconds": 0.5570480109890923,
+      "decode_seconds": 0.7883836469845846,
+      "inference_seconds": 1.345431657973677,
+      "decode_tokens_per_s": 13.952597878041837,
+      "mean_inter_token_latency_seconds": 0.07167124063496223,
+      "mean_time_per_output_token_seconds": 0.11211930483113974,
+      "score": {
+        "prediction": "\n\n<think>\n\n</think>\n\nZX-7311",
+        "answer": "ZX-7311",
+        "exact_match": false
+      }
+    }
+  ],
+  "summary": {
+    "overall": {
+      "baseline": {
+        "8192": {
+          "total_examples": 3,
+          "exact_matches": 0,
+          "accuracy": 0.0
+        }
+      }
+    },
+    "by_tier": {
+      "baseline": {
+        "8192": {
+          "A": {
+            "total_examples": 1,
+            "exact_matches": 0,
+            "accuracy": 0.0
+          },
+          "B": {
+            "total_examples": 1,
+            "exact_matches": 0,
+            "accuracy": 0.0
+          },
+          "C": {
+            "total_examples": 1,
+            "exact_matches": 0,
+            "accuracy": 0.0
+          }
+        }
+      }
+    }
+  },
+  "generation_summary": {
+    "num_trials": 3,
+    "successful_trials": 3,
+    "mean_wall_time_seconds": 2.063590215325045,
+    "median_wall_time_seconds": 2.273828604957089,
+    "mean_output_tokens_per_s": 8.228445322602173,
+    "mean_ttft_seconds": 0.9052654107411703,
+    "mean_decode_tokens_per_s": 13.634267203624026,
+    "mean_inter_token_latency_seconds": 0.07337325396549432
+  },
+  "memory_after_generate": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 76601,
+      "utilization_gpu": 14
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_generate": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "status": "success"
+}

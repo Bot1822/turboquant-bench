@@ -1,0 +1,171 @@
+{
+  "mode": "tq4",
+  "model": "/share/models/official/Qwen3.5-35B-A3B",
+  "dataset_path": "/ceph/User/E01442/turboquant/doc/turboquant-pr38479-qwen35-benchmark/results/retrieval/generated/retrieval_examples.jsonl",
+  "target_tokens": 32768,
+  "gpu_memory_utilization": 0.94,
+  "max_tokens": 24,
+  "memory_before": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 801,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_before": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "num_examples": 3,
+  "example_ids": [
+    "tierA-32768-0",
+    "tierB-32768-0",
+    "tierC-32768-0"
+  ],
+  "max_prompt_tokens": 43790,
+  "mean_prompt_tokens": 43768.333333333336,
+  "effective_max_model_len": 43878,
+  "memory_after_load": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 76230,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_after_load": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  },
+  "cache_dtype": "tq4",
+  "block_size": 2096,
+  "num_gpu_blocks": 348,
+  "status": "error",
+  "error_type": "EngineDeadError",
+  "error": "EngineCore encountered an issue. See stack trace (above) for the root cause.",
+  "traceback": "Traceback (most recent call last):\n  File \"/ceph/User/E01442/turboquant/doc/turboquant-pr38479-qwen35-benchmark/container_retrieval_runner.py\", line 102, in main\n    run_generation_trial(llm, longest_prompt, warmup_max_tokens, -1 - warmup_index)\n  File \"/ceph/User/E01442/turboquant/doc/turboquant-pr38479-qwen35-benchmark/container_case_runner.py\", line 72, in run_generation_trial\n    outputs = llm.generate([prompt], sampling_params)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/vllm/entrypoints/llm.py\", line 500, in generate\n    return self._run_completion(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/vllm/entrypoints/llm.py\", line 1859, in _run_completion\n    return self._run_engine(use_tqdm=use_tqdm, output_type=output_type)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/vllm/entrypoints/llm.py\", line 2011, in _run_engine\n    step_outputs = self.llm_engine.step()\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/vllm/v1/engine/llm_engine.py\", line 302, in step\n    outputs = self.engine_core.get_output()\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/ceph/User/E01442/turboquant/vllm/.worktrees/pr-38479-turboquant/vllm/v1/engine/core_client.py\", line 765, in get_output\n    raise self._format_exception(outputs) from None\nvllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.\n",
+  "memory_on_error": [
+    {
+      "index": 0,
+      "memory_used_mb": 71649,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 1,
+      "memory_used_mb": 17,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 2,
+      "memory_used_mb": 15841,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 3,
+      "memory_used_mb": 77856,
+      "utilization_gpu": 100
+    },
+    {
+      "index": 4,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 5,
+      "memory_used_mb": 66639,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 6,
+      "memory_used_mb": 1557,
+      "utilization_gpu": 0
+    },
+    {
+      "index": 7,
+      "memory_used_mb": 65503,
+      "utilization_gpu": 0
+    }
+  ],
+  "torch_memory_on_error": {
+    "device": 0.0,
+    "allocated_mb": 0.0,
+    "reserved_mb": 0.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0
+  }
+}

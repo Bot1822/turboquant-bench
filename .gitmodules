@@ -1,0 +1,6 @@
+[submodule "vllm"]
+	path = vllm
+	url = https://github.com/vllm-project/vllm.git
+[submodule "turboquant-vllm"]
+	path = turboquant-vllm
+	url = https://github.com/Alberto-Codes/turboquant-vllm.git

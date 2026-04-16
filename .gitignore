@@ -9,6 +9,9 @@
 # Benchmark-side generated build cache
 doc/turboquant-pr38479-qwen35-benchmark/cache/
 doc/turboquant-pr38479-qwen35-benchmark/results/plugin_v019_full/
+doc/turboquant-pr38479-qwen35-benchmark/results/pr_latest_vs_plugin_qwen3_20260415/local_snap_buildsmoke/models.json
+doc/turboquant-pr38479-qwen35-benchmark/results/pr_latest_vs_plugin_qwen3_20260415/local_snap_buildsmoke/postinstall_vllm.txt
+doc/turboquant-pr38479-qwen35-benchmark/results/pr_latest_vs_plugin_qwen3_20260415/local_snap_buildsmoke/serve.log
 
 # Separate local workspace, not managed by this root repo
 turboquant-test/

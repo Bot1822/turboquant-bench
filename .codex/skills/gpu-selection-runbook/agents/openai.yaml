@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPU Selection"
+  short_description: "Choose the emptiest local or remote GPU"
+  default_prompt: "Use $gpu-selection-runbook to select the best local or remote GPU before launching an experiment."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "TurboQuant LM-Eval"
+  short_description: "Ability regression workflow for TurboQuant models"
+  default_prompt: "Use $turboquant-lm-eval-regression to run and document TurboQuant capability evaluations with lm-eval."

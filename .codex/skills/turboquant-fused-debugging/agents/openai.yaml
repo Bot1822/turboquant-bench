@@ -1,0 +1,4 @@
+interface:
+  display_name: "TurboQuant Fused Debug"
+  short_description: "Debug KV cache and fused path failures"
+  default_prompt: "Use $turboquant-fused-debugging to investigate TurboQuant fused-path startup, KV cache sizing, and performance regressions."

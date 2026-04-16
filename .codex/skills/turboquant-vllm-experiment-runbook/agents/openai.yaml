@@ -1,0 +1,4 @@
+interface:
+  display_name: "TurboQuant Runbook"
+  short_description: "Remote vLLM/TurboQuant experiment workflow"
+  default_prompt: "Use $turboquant-vllm-experiment-runbook to set up, benchmark, document, and clean up a TurboQuant vLLM experiment."

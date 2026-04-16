@@ -1,4 +1,6 @@
-.codex/
+.codex/*
+!.codex/skills/
+!.codex/skills/**
 .tmp/
 
 # Local scratch / generated artifacts

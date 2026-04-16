@@ -258,9 +258,278 @@
   - current heavy GPU usage is attributable to external host-side jobs
     (`ray::WorkerDict`, another `VLLM::Worker_TP*`, and unrelated Python
     processes), not to our stale experiment workers
+- Connected to remote host `10.90.24.4` as `guipeng` after the correct
+  username was provided.
+- Verified remote shared paths exist:
+  - `/ceph/User/E01442/turboquant`
+  - `/share/models/official/Qwen3.5-35B-A3B`
+- Verified remote GPU state:
+  - GPUs `4/5/6/7` are effectively empty and suitable for benchmarking
+- Switched the next comparison step to remote online benchmarking on that host
+  to avoid local GPU contention.
 - Organized the top-level `/ceph/User/E01442/turboquant` repository:
   - added a root `.gitignore`
   - added a root `README.md`
   - recorded `vllm` and `turboquant-vllm` as git submodules in `.gitmodules`
   - left `turboquant-test/` out of the root repository on purpose as a
     separate local workspace
+- Re-checked whether remote GPU pressure on `10.90.24.4` was caused by our own
+  leftover experiment services.
+- Confirmed that the following stale remote containers from our earlier tests
+  were still running:
+  - `zgp-vllm019-cu130-remote-baseline`
+  - `zgp-vllm019-cu130-remote-plugin`
+  - `zgp-vllm019-cu130-host-baseline`
+  - `zgp-vllm019-cu130-host-plugin`
+- Removed those stale remote containers and verified that remote GPUs
+  `4/5/6/7` returned to near-empty state.
+- Started a first remote `lm_eval` capability-evaluation attempt from the local
+  machine against `.4`-hosted services:
+  - baseline endpoint: `http://10.90.24.4:8040/v1/chat/completions`
+  - plugin endpoint: `http://10.90.24.4:8041/v1/chat/completions`
+  - task: `mmlu_pro`
+  - local model interface: `local-chat-completions`
+- Confirmed that this initial run should not be treated as a short smoke test:
+  - in the current `lm_eval` package, `mmlu_pro` resolves to the
+    Llama-style instruct variant under `tasks/llama3/instruct/mmlu_pro/`
+  - that task uses `output_type: generate_until` rather than
+    `multiple_choice`
+  - its default evaluation prompt explicitly asks the model to reason and end
+    with `The best answer is [LETTER].`
+  - its default `max_gen_toks` is `1024`
+- Confirmed why the initial `--limit 0.02` run is slow:
+  - `0.02` maps to `247` evaluation items on this task
+  - remote baseline generation throughput is about `12 tok/s`
+  - remote plugin generation throughput is about `10.8 tok/s`
+  - with serialized requests, that configuration is effectively a background
+    long run rather than a quick sanity check
+- Decided to keep the existing `gpu4/gpu5` services and local `lm_eval`
+  processes alive as background evidence while moving the next controlled
+  smoke comparison to fresh `.4` services on `gpu6/gpu7`.
+- Provisioned an additional remote ability-evaluation pair on
+  `10.90.24.4`:
+  - baseline ability service on `gpu6`, port `8042`
+  - plugin ability service on `gpu7`, port `8043`
+- Recorded an avoidable but now-understood launch failure while creating that
+  pair:
+  - the first attempt omitted `--entrypoint bash`
+  - the official image entrypoint is `vllm`, so Docker appended `-lc ...`
+    directly to `vllm` and both containers exited with
+    `vllm: error: unrecognized arguments: -lc ...`
+  - the rerun with `--entrypoint bash` fixed the issue
+- Measured the actual prompt length of the current `lm_eval` `mmlu_pro`
+  five-shot prompt using the local Qwen3.5 tokenizer:
+  - for the first 20 test items, prompt length ranged from `1139` to `1471`
+    tokens
+  - `max_model_len=4096` is therefore sufficient for the current ability-smoke
+    path
+- Probed both new services directly:
+  - `/v1/models` works on `8042` and `8043`
+  - `/v1/completions` with `echo=true` and `logprobs=1` works on both
+    baseline and plugin
+  - `/v1/chat/completions` is less suitable for stable MC evaluation on this
+    model because even a trivial prompt tends to emit a `Thinking Process`
+    prefix
+- Switched the short ability-regression smoke from `mmlu_pro` chat-generation
+  to `leaderboard_mmlu_pro` over `local-completions`:
+  - this path uses prompt loglikelihood scoring instead of long generation
+  - it is materially faster and better aligned with multiple-choice regression
+    checking
+- Completed `leaderboard_mmlu_pro` smoke on the new remote pair:
+  - `limit=20`:
+    - baseline `acc=0.70 ± 0.1051`
+    - plugin `acc=0.70 ± 0.1051`
+    - sample-level comparison: identical correctness on all `20/20` items,
+      identical predicted option on `18/20`
+  - `limit=100`:
+    - baseline `acc=0.48 ± 0.0502`
+    - plugin `acc=0.48 ± 0.0502`
+    - sample-level comparison:
+      - same correctness on `96/100`
+      - same predicted option on `87/100`
+      - baseline-only correct on `2` items
+      - plugin-only correct on `2` items
+- Immediate interpretation from the new ability runs:
+  - no aggregate regression is visible on the current `20`-item and
+    `100`-item `leaderboard_mmlu_pro` slices
+  - the prediction path is not identical, so the plugin does perturb answer
+    preferences on some items even when the aggregate score matches
+  - the current slice is still too small to rule out a small true capability
+    delta
+- Cleaned up all remote benchmarking services after the ability runs finished:
+  - stopped the earlier long-running `mmlu_pro` chat-completions probes on
+    local PIDs `1032154` and `1032184`
+  - removed remote service containers:
+    - `zgp-vllm019-cu130-host-baseline`
+    - `zgp-vllm019-cu130-host-plugin`
+    - `zgp-vllm019-cu130-host-baseline-acc2`
+    - `zgp-vllm019-cu130-host-plugin-acc2`
+  - verified that remote GPUs `4/5/6/7` returned to near-empty state
+- Started a second, more systematic capability-evaluation pass with three
+  benchmark families:
+  - `leaderboard_ifeval`
+  - `leaderboard_mmlu_pro`
+  - `leaderboard_math_hard`
+- Verified the current `lm_eval` task shapes before launching:
+  - `leaderboard_ifeval` is `generate_until`
+  - `leaderboard_mmlu_pro` is `multiple_choice`
+  - `leaderboard_math_hard` is a 7-task group over
+    `DigitalLearningGmbH/MATH-lighteval`, each task using `generate_until`
+- Downloaded the missing public datasets through
+  `HF_ENDPOINT=https://hf-mirror.com`:
+  - `wis-k/instruction-following-eval`
+  - `DigitalLearningGmbH/MATH-lighteval`
+- Measured representative prompt lengths with the local Qwen3.5 tokenizer:
+  - `IFEval`: about `17` to `90` tokens over the first 50 items
+  - `leaderboard_mmlu_pro`: about `822` to `1154` tokens over the first
+    50 items
+  - `leaderboard_math_hard`: about `882` to `1138` tokens over the first
+    50 items
+- Decided to standardize the service-side `max_model_len` to `16384` for the
+  systematic pass.
+- Provisioned a new remote service pair for the systematic run:
+  - baseline: `zgp-vllm019-cu130-sys-baseline` on `.4 gpu6`, port `8042`
+  - plugin: `zgp-vllm019-cu130-sys-plugin` on `.4 gpu7`, port `8043`
+- Revalidated after launch:
+  - both services expose `/v1/models`
+  - both services expose `/v1/completions`
+  - plugin startup under `16384` remains slower than baseline but succeeds
+- Ran higher-concurrency probes to choose the final client setting:
+  - `leaderboard_mmlu_pro` at `num_concurrent=8` completed cleanly on both
+    baseline and plugin
+  - `leaderboard_ifeval` at `num_concurrent=8` also completed, but showed much
+    higher per-sample cost
+  - `leaderboard_math_hard` at `num_concurrent=8` completed as a probe and
+    confirmed that group tasks fan out by subject, so `limit=N` means `N` per
+    subtask rather than `N` total
+- Locked the final systematic matrix to:
+  - `leaderboard_mmlu_pro`: `limit=200`
+  - `leaderboard_ifeval`: `limit=50`
+  - `leaderboard_math_hard`: `limit=10` (per subtask, `70` questions total)
+  - common model args: `max_length=16384`, `num_concurrent=8`
+- Completed the formal systematic run:
+  - `leaderboard_mmlu_pro`:
+    - baseline `acc=0.48 ± 0.0354`, `174.52 s`
+    - plugin `acc=0.47 ± 0.0354`, `192.69 s`
+    - sample-level comparison:
+      - same correctness `192/200`
+      - baseline-only correct `5`
+      - plugin-only correct `3`
+  - `leaderboard_ifeval`:
+    - baseline:
+      - prompt strict `0.44`
+      - prompt loose `0.48`
+      - inst strict `0.5526`
+      - inst loose `0.5789`
+      - wall `577.27 s`
+    - plugin:
+      - prompt strict `0.52`
+      - prompt loose `0.56`
+      - inst strict `0.6184`
+      - inst loose `0.6447`
+      - wall `545.69 s`
+    - sample-level comparison:
+      - prompt strict same on `46/50`
+      - plugin-only prompt-strict wins `4`
+      - baseline-only prompt-strict wins `0`
+  - `leaderboard_math_hard` (`70` questions total):
+    - baseline `exact_match=0.5714 ± 0.0579`, `538.54 s`
+    - plugin `exact_match=0.5571 ± 0.0545`, `608.82 s`
+    - sample-level comparison:
+      - same exact-match label `53/70`
+      - baseline-only correct `9`
+      - plugin-only correct `8`
+    - subtask trend:
+      - plugin better on `algebra` and `num_theory`
+      - baseline better on `counting_and_probability`, `prealgebra`,
+        and especially `precalculus`
+- Important runtime observation during the systematic run:
+  - plugin repeatedly hit TurboQuant paged-decompress dynamic fallback
+  - representative warnings:
+    - `39 unique blocks exceed pre-allocated capacity (32 blocks)` under
+      `leaderboard_mmlu_pro` concurrency probe
+    - `122 unique blocks exceed pre-allocated capacity (32 blocks)` during the
+      formal `leaderboard_math_hard` run
+  - this did not cause immediate correctness collapse, but it is a concrete
+    robustness signal against the plugin under heavier mixed decode workloads
+- Wrote a dedicated Chinese report for this pass:
+  - `10-systematic-capability-report-2026-04-10.md`
+- Cleaned up the systematic service pair after the run:
+  - removed `zgp-vllm019-cu130-sys-baseline`
+  - removed `zgp-vllm019-cu130-sys-plugin`
+  - verified that remote `gpu6/gpu7` returned to near-empty state
+- After the subsample pass, switched to a full-evaluation strategy on the
+  remote host because GPUs `4/5/6/7` were confirmed to be empty.
+- Decided to use two independent baseline/plugin service pairs so that the
+  longest benchmark (`leaderboard_mmlu_pro` full) can run in parallel with the
+  full generative tasks:
+  - pair A on `gpu4/gpu5` for `leaderboard_ifeval` full and
+    `leaderboard_math_hard` full
+  - pair B on `gpu6/gpu7` for `leaderboard_mmlu_pro` full
+- The full pass keeps the same common serving assumptions as the systematic
+  subsample pass:
+  - official `v0.19.0-x86_64-cu130`
+  - baseline uses `kv_cache_dtype=fp8`
+  - plugin uses `attention_backend=CUSTOM`
+  - `max_model_len=16384`
+  - client-side `num_concurrent=8`
+- `2026-04-10 18:38:35 +0800`
+  - received a cleanup request for the remote full benchmark servers on
+    `10.90.24.4`
+  - `ssh -p 2222` was refused, so the cleanup was executed via the default SSH
+    port as `guipeng@10.90.24.4`
+  - removed the four residual full-service containers:
+    - `zgp-vllm019-cu130-full-baseline-a`
+    - `zgp-vllm019-cu130-full-plugin-a`
+    - `zgp-vllm019-cu130-full-baseline-b`
+    - `zgp-vllm019-cu130-full-plugin-b`
+  - verified post-cleanup that:
+    - `docker ps -a` no longer shows any `zgp-` container
+    - ports `8040-8043` no longer have listening sockets
+- `2026-04-10 19:05:35 +0800`
+  - started a new fused-kernel benchmark track for `turboquant-vllm` on
+    `10.90.24.4` using `/share/models/official/Qwen3.5-35B-A3B`
+  - wrote dedicated design and execution docs:
+    - `12-fused-kernel-benchmark-design-2026-04-10.md`
+    - `13-fused-kernel-execution-plan-2026-04-10.md`
+    - `14-fused-kernel-worklog-2026-04-10.md`
+  - planned four parallel single-GPU services on remote GPUs `4/5/6/7`:
+    - `baseline-bf16`
+    - `baseline-fp8`
+    - `tq-unfused`
+    - `tq-fused`
+  - all services were intentionally started without `--enforce-eager` to
+    validate the non-eager path first
+  - the first `baseline-bf16` / `baseline-fp8` launch used the wrong command
+    form against the official image entrypoint and exited immediately; both
+    were relaunched with `--entrypoint bash -lc "vllm serve ..."`
+  - `tq-unfused` reached `AttentionBackendEnum.CUSTOM`, loaded weights, and
+    entered torch.compile warmup
+  - the first `tq-fused` attempt also reached non-eager compile warmup but
+    exited before the service became ready; because it had `--rm`, a second
+    debug container was relaunched without auto-remove to preserve crash logs
+  - later findings from this track:
+    - non-eager `tq-fused` fails deterministically during CUDA graph capture
+      with `operation not permitted when stream is capturing`
+    - practical KV cache capacity is:
+      - `bf16`: `48,576 tokens`
+      - `fp8`: `96,416 tokens`
+      - `tq-unfused`: `97,152 tokens`
+    - so TurboQuant is effectively at parity with `fp8` on cache size in this
+      vLLM integration, not materially ahead of it
+    - short serving smoke (`1024 in / 512 out / 64 req / rate=inf`) showed:
+      - `fp8` output throughput `1119.96 tok/s`
+      - `bf16` output throughput `1033.17 tok/s`
+      - `tq-unfused` output throughput `771.98 tok/s`
+    - long-context smoke (`12000 in / 256 out / 32 req / rate=inf`) showed:
+      - `fp8` output throughput `208.38 tok/s`
+      - `bf16` output throughput `207.79 tok/s`
+      - `tq-unfused` output throughput `121.47 tok/s`
+    - eager-only A/B on GPU7 showed fused still behind unfused:
+      - `tq-unfused-eager`: `298.08 tok/s`, `median TPOT 108.47 ms`
+    - `tq-fused-eager`: `248.38 tok/s`, `median TPOT 114.96 ms`
+  - wrote the dedicated Chinese summary report:
+    - `15-fused-kernel-report-2026-04-10.md`
+  - after the follow-up KV-cache and fused-path fixes, wrote a consolidated
+    two-week report:
+    - `16-biweekly-report-2026-04-13.md`

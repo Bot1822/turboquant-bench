@@ -1,0 +1,5 @@
+{
+  "status": "serve_failed",
+  "detail": "vllm serve did not become ready",
+  "timestamp": "2026-04-16T05:12:35+00:00"
+}

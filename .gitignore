@@ -8,6 +8,7 @@
 
 # Benchmark-side generated build cache
 doc/turboquant-pr38479-qwen35-benchmark/cache/
+doc/turboquant-pr38479-qwen35-benchmark/results/plugin_v019_full/
 
 # Separate local workspace, not managed by this root repo
 turboquant-test/

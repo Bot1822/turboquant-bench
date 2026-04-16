@@ -289,6 +289,9 @@ PR `#38479` `tq4@4096` steady-state result:
     `12.16 tok/s`, wall `9.31 tok/s`
   - second rerun in that same fresh official container on `gpu0`: TTFT
     `0.36 s`, decode `12.78 tok/s`, wall `11.49 tok/s`
+  - remote built-in `bench serve` on `10.90.24.4`:
+    - baseline mean TTFT `366.6 ms`, mean TPOT `80.43 ms`, mean E2EL `2860.0 ms`
+    - plugin mean TTFT `427.2 ms`, mean TPOT `89.87 ms`, mean E2EL `3213.1 ms`
 
 - PR `#38479` `tq4@4096`:
   - TTFT `0.26 s`
@@ -321,8 +324,140 @@ already robust:
   memory profiling / KV budget selection plus first-run warmup state in the
   plugin stack, not sustained third-party GPU contention or a large change in
   steady-state decode speed itself
+- the remote repeated online benchmark removes most of the single-run
+  ambiguity: under `20` serialized requests at `3984/32`, the plugin still
+  trails the fixed baseline on mean TTFT, mean TPOT, and mean end-to-end
+  latency
 - relative to PR `#38479` `tq4@4096`, the plugin remains slightly slower on
   decode and materially slower on TTFT
+
+## Ability Evaluation
+
+Capability follow-up on `2026-04-10` used a different path from the earlier
+`mmlu_pro` chat-completions attempt.
+
+The important distinction is that, in the current `lm_eval` package,
+`mmlu_pro` resolves to the Llama-style instruct task group under
+`tasks/llama3/instruct/mmlu_pro/`, which is `generate_until` and therefore
+turns even a small `--limit 0.02` probe into a long-running reasoning-style
+generation benchmark. For a tighter regression smoke, the evaluation was moved
+to `leaderboard_mmlu_pro` over `local-completions`, using the remote
+OpenAI-compatible `/v1/completions` endpoint with prompt logprobs enabled.
+
+That path produced two useful subsample comparisons on the same remote
+baseline/plugin pair:
+
+- `limit=20`:
+  - baseline: `acc=0.70 ± 0.1051`
+  - plugin: `acc=0.70 ± 0.1051`
+  - sample-level comparison:
+    - same correctness on `20/20`
+    - same predicted option on `18/20`
+- `limit=100`:
+  - baseline: `acc=0.48 ± 0.0502`
+  - plugin: `acc=0.48 ± 0.0502`
+  - sample-level comparison:
+    - same correctness on `96/100`
+    - same predicted option on `87/100`
+    - baseline-only correct on `2` items
+    - plugin-only correct on `2` items
+
+The current evidence therefore supports a narrow claim: on these
+`leaderboard_mmlu_pro` subsamples, no aggregate capability drop is visible for
+`turboquant-vllm` relative to the fixed official baseline. At the same time,
+the sample-level prediction path is not identical, so the plugin is not
+behaviorally equivalent item by item. The measured slices are still too small
+to rule out a modest true delta, but they do rule out an obvious or
+catastrophic regression on this benchmark path.
+
+## Systematic Three-Benchmark Pass
+
+A more systematic pass was then run on `2026-04-10` with a unified remote
+service pair on `10.90.24.4`, `max_model_len=16384`, and `num_concurrent=8`.
+The three benchmark families were:
+
+- `leaderboard_mmlu_pro`
+- `leaderboard_ifeval`
+- `leaderboard_math_hard`
+
+Because the per-sample cost differs sharply across these tasks, the run used a
+cost-balanced budget rather than a shared `limit`:
+
+- `leaderboard_mmlu_pro`: `limit=200`
+- `leaderboard_ifeval`: `limit=50`
+- `leaderboard_math_hard`: `limit=10` per subtask (`70` math questions total)
+
+The main results were:
+
+- `leaderboard_mmlu_pro`
+  - baseline: `0.48 ± 0.0354`
+  - plugin: `0.47 ± 0.0354`
+  - throughput:
+    - baseline about `1.146 samples/s`, `11.34 requests/s`
+    - plugin about `1.038 samples/s`, `10.27 requests/s`
+  - sample-level comparison:
+    - same correctness `192/200`
+    - baseline-only correct `5`
+    - plugin-only correct `3`
+- `leaderboard_ifeval`
+  - baseline:
+    - prompt strict `0.44`
+    - prompt loose `0.48`
+    - inst strict `0.5526`
+    - inst loose `0.5789`
+  - plugin:
+    - prompt strict `0.52`
+    - prompt loose `0.56`
+    - inst strict `0.6184`
+    - inst loose `0.6447`
+  - throughput:
+    - baseline about `0.0866 samples/s`
+    - plugin about `0.0916 samples/s`
+  - prompt-level strict comparison:
+    - same label `46/50`
+    - plugin-only wins `4`
+    - baseline-only wins `0`
+- `leaderboard_math_hard`
+  - baseline: `0.5714 ± 0.0579`
+  - plugin: `0.5571 ± 0.0545`
+  - throughput:
+    - baseline about `0.1300 samples/s`
+    - plugin about `0.1150 samples/s`
+  - sample-level comparison:
+    - same exact-match label `53/70`
+    - baseline-only correct `9`
+    - plugin-only correct `8`
+  - subtask trend:
+    - plugin higher on `algebra` and `num_theory`
+    - baseline higher on `counting_and_probability`, `prealgebra`, and
+      especially `precalculus`
+
+The runtime behavior in this systematic pass is also important. Under the
+heavier plugin runs, TurboQuant repeatedly emitted paged-decompress fallback
+warnings, including:
+
+- `39 unique blocks exceed pre-allocated capacity (32 blocks)` during the
+  high-concurrency `leaderboard_mmlu_pro` probe
+- `122 unique blocks exceed pre-allocated capacity (32 blocks)` during the
+  formal `leaderboard_math_hard` run
+
+That pattern strengthens the earlier performance conclusion: even when the
+aggregate capability gap is small or mixed, the plugin's runtime path remains
+less robust than the fixed official baseline.
+
+Taking the three tasks together, the current evidence is mixed rather than
+uniform:
+
+- common-knowledge / MC path: plugin slightly worse and slower
+- instruction-following path: plugin better on this slice and slightly faster
+- math path: plugin slightly worse and slower
+
+So the best current interpretation is:
+
+- there is no evidence of a catastrophic capability collapse from the plugin
+- there is also no evidence of a consistent quality win
+- the most stable negative signal remains runtime robustness and throughput,
+  not a single large aggregate accuracy drop
 
 ## Caveats
 

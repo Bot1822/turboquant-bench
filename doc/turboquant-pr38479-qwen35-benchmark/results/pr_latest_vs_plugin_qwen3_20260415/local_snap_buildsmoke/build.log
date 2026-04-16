@@ -1,0 +1,26 @@
+[2026-04-15T10:55:13+00:00] build+smoke start
+[2026-04-15T10:56:03+00:00] start editable install
+Using Python 3.12.13 environment at: /usr
+Resolved 1 package in 3.24s
+   Building vllm @ file:///tmp/prlatest
+      Built vllm @ file:///tmp/prlatest
+Prepared 1 package in 230m 40s
+Installed 1 package in 7ms
+ + vllm==0.19.0 (from file:///tmp/prlatest)
+[2026-04-15T14:46:48+00:00] editable install finished
+[2026-04-15T14:46:48+00:00] start local smoke serve
+[2026-04-16T01:08:12+00:00] build+smoke start
+[2026-04-16T01:09:05+00:00] build+smoke start
+[2026-04-16T01:11:09+00:00] build+smoke start
+[2026-04-16T01:12:35+00:00] build+smoke start
+[2026-04-16T01:12:55+00:00] start editable install
+Using Python 3.12.13 environment at: /usr
+Resolved 1 package in 9.86s
+   Building vllm @ file:///ceph/User/E01442/turboquant/.tmp/pr38479_upstream_buildsmoke_root_20260416_011200
+      Built vllm @ file:///ceph/User/E01442/turboquant/.tmp/pr38479_upstream_buildsmoke_root_20260416_011200
+Prepared 1 package in 238m 15s
+Installed 1 package in 8ms
+ + vllm==0.19.0 (from file:///ceph/User/E01442/turboquant/.tmp/pr38479_upstream_buildsmoke_root_20260416_011200)
+[2026-04-16T05:11:21+00:00] editable install finished
+[2026-04-16T05:11:30+00:00] cuda preflight finished
+[2026-04-16T05:11:30+00:00] start local smoke serve

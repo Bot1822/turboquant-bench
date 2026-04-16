@@ -1,0 +1,4 @@
+torch 2.10.0+cu129
+is_available True
+device_count 1
+tensor_device cuda:0
